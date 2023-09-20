@@ -11,19 +11,20 @@ public class MagicWand extends Bow{
             this.damage = 40;
             this.price = 100;
         }else{
+            count++;
             System.out.println("Too many wands");
         }
     }
     public MagicWand(int i_damage, int i_price, int i_range, Spell i_type){
         super(i_damage,i_price,i_range);
         if(count<5){
-
             this.type=i_type;
             count++;
         }else{
             this.damage = 0;
             this.price = 0;
             this.range = 0;
+            count++;
             System.out.println("Too many wands");
         }
     }
@@ -37,6 +38,7 @@ public class MagicWand extends Bow{
             this.damage = 0;
             this.price = 0;
             this.range = 0;
+            count++;
             System.out.println("Too many wands");
 
         }
@@ -50,6 +52,11 @@ public class MagicWand extends Bow{
             System.out.println("Enemy isn't in wand's range. You can't attack :(");
         }
         return inRange;
+    }
+    @Override
+    public int showDamage(){
+        System.out.println("MagicWand damage: "+this.damage);
+        return  this.damage;
     }
     public Spell cast(int x, int y){
     //public void cast(int x, int y){

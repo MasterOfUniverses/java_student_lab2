@@ -7,6 +7,12 @@ public class useWeapons {
         Bow weapon_1 = new Bow(10,60,160);
         Sword weapon_2 = new Sword();
         MagicWand weapon_3 = new MagicWand(40,200,40,"Fireball",10);
+
+        MagicWand weapon_4[] = new MagicWand[10];
+        for(int i=0;i<weapon_4.length;i++){
+            weapon_4[i]=new MagicWand();
+        }
+
         Weapon[] person_weapons = new Weapon[3];
         person_weapons[0] = weapon_1;
         person_weapons[1] = weapon_2;
